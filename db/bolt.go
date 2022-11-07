@@ -25,7 +25,7 @@ func (b *Bolt) Connect(resources ...interface{}) (err error) {
 	//reading db filename
 	boltDBName, ok := resources[0].(string)
 	if !ok {
-		return errors.New("Unexpected resources set, want `boltDBName string`")
+		return errors.New("unexpected resources set, want `boltDBName string`")
 	}
 
 	//making directory with the prefix = boltDBName

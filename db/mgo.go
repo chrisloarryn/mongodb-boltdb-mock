@@ -1,4 +1,5 @@
-/*Package db - MongoDB realization for the  globalsign/mgo mongo driver
+/*
+Package db - MongoDB realization for the  globalsign/mgo mongo driver
 Driver's page: https://github.com/globalsign/mgo
 It's a community developing driver inspired by labix/mgo.v2
 */
@@ -42,12 +43,12 @@ func (m *Mongo) CopyWithSettings(settings ...interface{}) (Handler, error) {
 
 	mode, ok := settings[0].(int)
 	if !ok {
-		return nil, errors.New("Unexpected parameters set, want `mode int, refresh bool`")
+		return nil, errors.New("unexpected parameters set, want `mode int, refresh bool`")
 	}
 
 	refresh, ok = settings[1].(bool)
 	if !ok {
-		return nil, errors.New("Unexpected parameters set, want `mode int, refresh bool`")
+		return nil, errors.New("unexpected parameters set, want `mode int, refresh bool`")
 	}
 
 	copy := m.Session.Copy()
