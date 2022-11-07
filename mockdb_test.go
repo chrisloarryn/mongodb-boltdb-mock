@@ -1,12 +1,13 @@
-package db_test
+package mockdb_test
 
 import (
 	"testing"
 	"time"
 
-	"github.com/chrisloarryn/mongodb-boltdb-mock/db"
+	db "github.com/chrisloarryn/mongodb-boltdb-mock/db"
 	"github.com/stretchr/testify/assert"
 
+	mockdb "github.com/chrisloarryn/mongodb-boltdb-mock"
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"
 )
@@ -16,7 +17,7 @@ const (
 )
 
 func TestRealMongo(t *testing.T) {
-	mongo := db.New(&db.Mongo{})
+	mongo := mockdb.New(&db.Mongo{})
 	err := mongo.Connect(mgoTestDSN)
 	if err != nil {
 		t.Skipf("Failed to connect to db %s", err.Error())
@@ -173,7 +174,7 @@ func TestRealMongo(t *testing.T) {
 }
 
 func TestMock(t *testing.T) {
-	mock := db.New(&db.Mock{})
+	mock := mockdb.New(&db.Mock{})
 
 	t.Run("Handler Connect", func(t *testing.T) {
 		mock.Connect("dsnstring")
@@ -288,7 +289,7 @@ func TestMock(t *testing.T) {
 
 func TestBoltDB(t *testing.T) {
 
-	bolt := db.New(&db.Bolt{})
+	bolt := mockdb.New(&db.Bolt{})
 	err := bolt.Connect("bolt", "bucketOne", "bucketTwo")
 	if err != nil {
 		t.Fatalf("Failed to open bolt file, %v", err)
