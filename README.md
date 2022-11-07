@@ -1,5 +1,10 @@
 # NOTICE
 
+This repo is a fork from.  
+this repo in github, github.com/zaffka/mongodb-boltdb-mock
+
+# NOTICE
+
 This repo is restored.  
 I've deleted it from github, which broke InVisionApp/go-health:
 https://github.com/InVisionApp/go-health/issues/79
@@ -16,12 +21,23 @@ Package inspired by this article - [Mocking Mongo in Go](http://thylong.com/gola
 
 **Table of contents**
 
-- [How to install](#how-to-install)
-- [Package contents](#package-contents)
-- [Interface methods being in use by realization](#interface-methods-being-in-use-by-realization)
-- [MongoDB examples](#mongodb-examples)
-- [BoltDB examples](#boltdb-examples)
-- [Mocking](#mocking)
+- [NOTICE](#notice)
+- [NOTICE](#notice-1)
+- [Wrapper with mocks for MongoDB and BoltDB](#wrapper-with-mocks-for-mongodb-and-boltdb)
+	- [How to install](#how-to-install)
+	- [Package contents](#package-contents)
+	- [Interface methods being in use by realization](#interface-methods-being-in-use-by-realization)
+	- [MongoDB examples](#mongodb-examples)
+		- [...up the db](#up-the-db)
+			- [...inserting data](#inserting-data)
+			- [...reading](#reading)
+		- [...updating](#updating)
+	- [BoltDB examples](#boltdb-examples)
+		- [...up the db](#up-the-db-1)
+			- [...inserting data](#inserting-data-1)
+			- [...reading](#reading-1)
+		- [...deleting](#deleting)
+	- [Mocking](#mocking)
 
 ## How to install
 
