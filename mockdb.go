@@ -1,4 +1,4 @@
-package main
+package mockdb
 
 /*
 Package db - пакет враппер для работы с базами
