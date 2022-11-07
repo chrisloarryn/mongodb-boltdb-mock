@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/chrisloarryn/mongodb-boltdb-mock/db"
 	"github.com/stretchr/testify/assert"
-	"github.com/zaffka/mongodb-boltdb-mock/db"
 
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"

@@ -14,7 +14,7 @@ type Mock struct {
 func (mk *Mock) Connect(resources ...interface{}) (err error) {
 	dsn, ok := resources[0].(string)
 	if !ok {
-		return errors.New("Unexpected resources set, want `dsn string`")
+		return errors.New("unexpected resources set, want `dsn string`")
 	}
 	mk.Msg = dsn
 	return nil
